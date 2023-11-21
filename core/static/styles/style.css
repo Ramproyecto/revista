@@ -437,6 +437,10 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
+  .wrapper-dark .wrapper-light .wrapper-hero {
+    background-color: #000;
+  }
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -3043,6 +3047,7 @@ input[type="button"].btn-block {
 .tab-content > .active {
   display: block; }
 
+
 .navbar {
   position: relative;
   display: flex;
@@ -3050,6 +3055,7 @@ input[type="button"].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem; }
+  
   .navbar .container,
   .navbar .container-fluid, .navbar .container-sm, .navbar .container-md, .navbar .container-lg, .navbar .container-xl {
     display: flex;
@@ -7162,12 +7168,13 @@ a.text-dark:hover, a.text-dark:focus {
 
 .navbar {
   border-width: 1px;
-  border-style: solid; }
+  border-style: transparent; }
+
   .navbar-fixed-top {
     border-width: 0 0 1px 0; }
   .navbar-fixed-bottom {
     border-top-width: 1px 0 0 0;
-    border-style: solid; }
+    border-style: transparent; }
 
 .bg-primary {
   background-color: #D9230F !important;
