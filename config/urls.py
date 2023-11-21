@@ -1,4 +1,20 @@
-"""config URL Configuration
+
+from django.contrib import admin
+from core import views as core_views
+from django.urls import path
+
+urlpatterns = [
+    path('',core_views.Home,name='inicio'),
+    path('about/', core_views.AboutUs, name='nosotros'),
+    path('faq/', core_views.Frequent, name='preguntas_frecuentes'),
+    path('revista/', core_views.Magazine, name='revista'),
+    path('admin/', admin.site.urls),
+]
+
+
+
+"""
+config URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -29,14 +45,4 @@ urlpatterns = [
     
 ]
 
-
 """
-from django.contrib import admin
-from core import views as core_views
-from django.urls import path
-
-urlpatterns = [
-    path('',core_views.Home,name='inicio'),
-    path('about/', core_views.AboutUs, name='nosotros'),
-    path('admin/', admin.site.urls),
-]

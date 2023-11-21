@@ -10,11 +10,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{% static 'media/favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
     {% comment %}
-        <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css ">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    deberíamos conservar una sola llamada a css, ahora tenemos un static y el remoto.
+    creo que pueden chocar los estilos y va a ser más dificil controlarlos así:
     {% endcomment %}
+
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css ">
 
 
     
@@ -33,16 +37,25 @@
     <div class=" collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav mx-auto ">
         <li class="nav-item">
-            <a class="nav-link mx-2 active" aria-current="page" href="/">Home</a>
+            <a class="nav-link mx-2 active" aria-current="page" href="/">Inicio</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link mx-2" href="/about">About Us</a>
+            <a class="nav-link mx-2" href="/about">Nosotros</a>
         </li>
         <li class="nav-item d-none d-lg-block">
-            <a class="nav-link mx-2" href="#">
+            <a class="nav-link mx-2" href="/">
                 <img src="{% static '/media/img/insignia-ram.png' %}" height="80" />
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link mx-2" href="/revista">Revista</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link mx-2" href="/faq">Preguntas Frecuentes</a>
+        </li>
+        
+        {% comment %}
+            Este es el dropdown:
         <li class="nav-item dropdown">
             <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Company
@@ -52,13 +65,19 @@
             <li><a class="dropdown-item" href="/about">About Us</a></li>
         </ul>
         </li>
+        {% endcomment %}
     </ul>
     </div>
 </div>
 </nav>
 
 <!-- Header -->
-<header class="col-lg-12" style="background-image: url({% static '/media/img/ram-revista-logo.jpg' %});">
+<header class="col-lg-12" style="
+    background-image: url({% static '/media/img/ram-revista-logo.jpg' %});
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    ">
     {% comment %}
     revisar para que es esto xd
     <h1> </h1>
@@ -82,23 +101,23 @@
             <div class="col-xs-6 col-md-3">
             <h6>Categories</h6>
             <ul class="footer-links">
-                <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                <li><a href="">C</a></li>
+                <li><a href="">UI Design</a></li>
+                <li><a href="">PHP</a></li>
+                <li><a href="">Java</a></li>
+                <li><a href="">Android</a></li>
+                <li><a href="">Templates</a></li>
             </ul>
             </div>
     
             <div class="col-xs-6 col-md-3">
             <h6>Quick Links</h6>
             <ul class="footer-links">
-                <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Contribute</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Sitemap</a></li>
             </ul>
             </div>
         </div>
@@ -122,5 +141,6 @@
         </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
