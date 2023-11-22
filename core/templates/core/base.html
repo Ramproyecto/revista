@@ -82,14 +82,11 @@
     background-image: url(
         {% if ruta_actual == '/' %}
         {% static '/media/background/inicio.jpg' %}
-        {% endif %}
-        {% if ruta_actual == '/about/' %}
+        {% elif ruta_actual == '/about/' %}
         {% static '/media/background/nosotros.jpg' %}
-        {% endif %}
-        {% if ruta_actual == '/revista/' %}
+        {% elif ruta_actual == '/revista/' %}
         {% static '/media/background/revista.jpg' %}
-        {% endif %}
-        {% if ruta_actual == '/faq/' %}
+        {% elif ruta_actual == '/faq/' %}
         {% static '/media/background/faq.jpg' %}
         {% endif %}
         );
